@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "imagepickerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rebeloper/ImagePickerView.git",
+      "state" : {
+        "revision" : "8e72c67c10f23fe82235712fc6e1144cb8055363",
+        "version" : "0.2.2"
+      }
+    }
+  ],
+  "version" : 2
+}
