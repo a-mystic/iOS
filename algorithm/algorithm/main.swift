@@ -7,6 +7,4 @@
 
 import Foundation
 
-private let input : Int = Int(readLine()!)!
-
-print(b_1463(N: input))
+print(solution([1,2,3,4,5]))
