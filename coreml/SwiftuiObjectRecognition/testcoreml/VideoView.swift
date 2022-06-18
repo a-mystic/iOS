@@ -22,7 +22,7 @@ class videocontroller: UIViewController{
         resultLabel.textColor = UIColor.black
         resultLabel.textAlignment = NSTextAlignment.center
         resultLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
-        resultLabel.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.7)
+        resultLabel.backgroundColor = UIColor.clear
     }
     
     override func viewDidLoad() {
