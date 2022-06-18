@@ -17,3 +17,9 @@ mystack {
         Text("2")
     }
 }
+
+Text("transition")
+    .transition(.fadeAndMove)
+
+let result = 5.plusTwo_and_returnString
+print(result,type(of: result))
