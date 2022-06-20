@@ -148,9 +148,11 @@ extension EmotionVisualizerView{
         }
         
         self.animateCurrentEmotions()
+        if let color = self.backgroundColor?.cgColor{
+            ctx.setFillColor(color)
+            ctx.fill(rect)
+        }
         
-        ctx.setFillColor(self.backgroundColor!.cgColor)
-        ctx.fill(rect)
         
         guard let predictions = self.currentEmotions else{ return }
         

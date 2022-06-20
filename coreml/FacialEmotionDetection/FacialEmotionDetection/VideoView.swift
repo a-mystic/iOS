@@ -31,11 +31,10 @@ class ViewController: UIViewController{
                 (self.previewView.layer as! AVCaptureVideoPreviewLayer).videoGravity = AVLayerVideoGravity.resizeAspectFill
                 let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 self.previewView.layer.frame = frame
-                self.viewVisualizer.frame = frame
-
+                self.viewVisualizer.frame = CGRect(x:100,y:300,width:frame.width / 2 , height: frame.height / 2 )
+                self.viewVisualizer.backgroundColor = .clear
                 
                 self.view.layer.addSublayer(self.previewView.layer)
-                self.view.addSubview(self.viewVisualizer)
                 self.videoCapture.startCapturing()
             } else{
                 fatalError("Failed to init VideoCapture")
@@ -89,6 +88,7 @@ extension ViewController : ImageProcessorDelegate{
                         self.viewVisualizer.update(
                             labelConference: classPredictions
                         )
+                        self.view.addSubview(self.viewVisualizer)
                     }
                 }
             }
