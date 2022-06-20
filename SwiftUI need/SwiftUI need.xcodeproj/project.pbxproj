@@ -10,6 +10,7 @@
 		4A41BFF2285DE57700B25C13 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41BFF1285DE57700B25C13 /* main.swift */; };
 		4A41BFF9285DE58700B25C13 /* modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41BFF8285DE58700B25C13 /* modifier.swift */; };
 		4A41BFFB285DE79100B25C13 /* Viewbuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41BFFA285DE79100B25C13 /* Viewbuilder.swift */; };
+		4A4974A5285ECA2D0081AB02 /* where.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4974A4285ECA2D0081AB02 /* where.swift */; };
 		4AF7A888285E15650044274A /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF7A887285E15650044274A /* extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		4A41BFF1285DE57700B25C13 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4A41BFF8285DE58700B25C13 /* modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifier.swift; sourceTree = "<group>"; };
 		4A41BFFA285DE79100B25C13 /* Viewbuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewbuilder.swift; sourceTree = "<group>"; };
+		4A4974A4285ECA2D0081AB02 /* where.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = where.swift; sourceTree = "<group>"; };
 		4AF7A887285E15650044274A /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				4A41BFF1285DE57700B25C13 /* main.swift */,
 				4A41BFFA285DE79100B25C13 /* Viewbuilder.swift */,
 				4AF7A887285E15650044274A /* extension.swift */,
+				4A4974A4285ECA2D0081AB02 /* where.swift */,
 				4A41BFF8285DE58700B25C13 /* modifier.swift */,
 			);
 			path = "SwiftUI need";
@@ -133,6 +136,7 @@
 				4A41BFFB285DE79100B25C13 /* Viewbuilder.swift in Sources */,
 				4A41BFF2285DE57700B25C13 /* main.swift in Sources */,
 				4AF7A888285E15650044274A /* extension.swift in Sources */,
+				4A4974A5285ECA2D0081AB02 /* where.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
