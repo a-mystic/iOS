@@ -7,7 +7,7 @@
 
 import Foundation
 
-func solution(_ answers:[Int]) -> [Int] {
+func exam_solution(_ answers:[Int]) -> [Int] {
     var one: Int = 0
     var two: Int = 0
     var three: Int = 0
