@@ -7,6 +7,4 @@
 
 import Foundation
 
-let arr1 = [[1],[2]]
-let arr2 = [[3],[4]]
-print(addmatrix_solution(arr1,arr2))
+print(phoneNumber_solution("027778888"))
