@@ -14,20 +14,31 @@ class videocontroller: UIViewController{
     let videoCapture : VideoCapture = VideoCapture()
     let context = CIContext()
     let model = Inceptionv3()
-    var resultLabel: UILabel!
-    private func labelsetup() {
-        resultLabel = UILabel()
-        resultLabel.text = ""
-        resultLabel.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 200, width: UIScreen.main.bounds.width, height: 80)
-        resultLabel.textColor = UIColor.black
-        resultLabel.textAlignment = NSTextAlignment.center
-        resultLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
-        resultLabel.backgroundColor = UIColor.clear
+//    var resultLabel: UILabel!
+    var labelset: (String) -> Void
+    
+    init(labelset: @escaping (String) -> Void) {
+        self.labelset = labelset
+        super.init(nibName: nil, bundle: nil)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    private func labelsetup() {
+//        resultLabel = UILabel()
+//        resultLabel.text = ""
+//        resultLabel.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 200, width: UIScreen.main.bounds.width, height: 80)
+//        resultLabel.textColor = UIColor.black
+//        resultLabel.textAlignment = NSTextAlignment.center
+//        resultLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+//        resultLabel.backgroundColor = UIColor.clear
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelsetup()
+//        labelsetup()
         self.videoCapture.delegate = self
         
         if self.videoCapture.initCamera(){
@@ -40,7 +51,7 @@ class videocontroller: UIViewController{
             previewView.layer.frame = frame
             
             self.view.layer.addSublayer(previewView.layer)
-            self.view.addSubview(resultLabel)
+//            self.view.addSubview(resultLabel)
             self.videoCapture.asyncStartCapturing()
 
             
@@ -69,14 +80,19 @@ extension videocontroller : VideoCaptureDelegate{
 
         // Update label
         DispatchQueue.main.sync {
-            self.resultLabel.text = prediction?.classLabel ?? "Unknown"
+            if let str = prediction?.classLabel {
+             labelset(str)
+            }
+//            self.resultLabel.text = prediction?.classLabel ?? "Unknown"
         }
     }
 }
 
 struct VideoView: UIViewControllerRepresentable{
+    var labelset: (String) -> Void
+    
     func makeUIViewController(context: Context) -> videocontroller {
-        return videocontroller()
+        return videocontroller(labelset: labelset)
     }
     
     func updateUIViewController(_ uiViewController: videocontroller, context: Context) {    }
