@@ -1,0 +1,605 @@
+{
+  "__content" : [
+    {
+      "scenes" : [
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "force" : [
+                                            1.928352304503278e-07,
+                                            5.0000004768371582,
+                                            -2.0548415591292724e-07
+                                          ],
+                                          "target" : [
+                                            "E57CD116-1085-4BCB-AB4B-866D6FC6DFC0"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "physics"
+                                        }
+                                      },
+                                      "identifier" : "F85FDE72-E4D8-434F-A17F-3FE5536B6925",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "4D2AF39E-C3C4-4504-8665-742F2CDA5D05",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "D36BD2F4-9D99-4D44-9927-7239618237B7",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "coffee throw",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "target" : [
+                                    "E57CD116-1085-4BCB-AB4B-866D6FC6DFC0"
+                                  ]
+                                },
+                                "name" : "tapTarget"
+                              },
+                              "identifier" : "88F2FBAD-F328-4723-AC1E-6398577AA0CB",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "1B285FD9-FEA4-448F-9BC4-3BE051921D8D",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "1D6EADCF-98C9-4E39-9D59-EE3ABBDC9C89" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Red Grapes"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "39046A84-DD7F-4A97-A94C-EC54EC06168B"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.RedGrapes.2aadbd74-32f3-4e57-9653-cc231ce4cb2b",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "D0DEFCBB-C490-4121-8449-B01EB5E6425B"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        0.59812909364700317,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.59812909364700317,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.59812909364700317,
+                        0,
+                        0.037042763084173203,
+                        0.042879916727542877,
+                        0.06842418760061264,
+                        1
+                      ]
+                    }
+                  },
+                  "80D733F8-6A7D-4BAA-A0F8-D74784CC32BF" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Paper Coffee Cup"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "E2BABC7B-0427-4700-BA8C-FD3B9C8D50CC"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.PaperCoffeeCup.246414c9-d5fe-4beb-bb7d-bec399bf2c8b",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "E57CD116-1085-4BCB-AB4B-866D6FC6DFC0"
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ],
+                        [
+                          "rigidBody-motionType",
+                          {
+                            "typeName" : "REMotionType",
+                            "value" : "dynamic"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0.2031472772359848,
+                        0,
+                        0.012551963329315186,
+                        1
+                      ]
+                    }
+                  },
+                  "04746B9D-A3C9-4C5A-AB82-79A4625AFF29" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Dinner Plate"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "1256D710-13CB-4609-9493-325F0B8EA0C4"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.DinnerPlate.aedf8f28-c493-48b4-9f61-948b7cb1d0d7",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "F6AD36EC-A3D5-4FA9-A430-81440E63925B"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  "B3841D59-6FE9-4F6A-9180-8844648BE2F4" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Watermelon"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "CADDB522-0A32-41AE-96F8-E081C0CB018B"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Watermelon.544a7d63-7527-4350-80c9-9a1d9eb767b7",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "7D727CFE-A43A-46FE-8A53-1862BBB02763"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        0.42339542508125305,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.42339542508125305,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.42339542508125305,
+                        0,
+                        -0.0079015474766492844,
+                        0.021800173446536064,
+                        0.039516039192676544,
+                        1
+                      ]
+                    }
+                  },
+                  "CC689B2B-E233-4297-8667-DBD78D8669BD" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Green Grapes"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "61761075-94B4-43A3-890D-9D05F8E2CBAB"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.GreenGrapes.be051570-9699-42e4-bf6a-0699aef92a33",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "3C30F823-2328-492F-937A-4E1D8EA9477B"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        0.25881928205490112,
+                        0,
+                        0.96592551469802856,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        -0.96592551469802856,
+                        0,
+                        0.25881928205490112,
+                        0,
+                        0.060968093574047089,
+                        0.0029133819043636322,
+                        -0.064355552196502686,
+                        1
+                      ]
+                    }
+                  },
+                  "Cube" : null,
+                  "E3BD95C3-8200-451B-B7E7-0BAC54C4DCDD" : null,
+                  "E1337C26-F800-4017-85CD-1016CFF15B6A" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Banana"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "2A3E4FBA-166F-4F5F-8FE5-9D093AED359C"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Banana.8166d13f-6997-4a23-9b4d-22c1710c4d8e",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "1BD60EC2-6D77-46DE-9CEE-9D30CD1E7953"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        0.55502057075500488,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.55502057075500488,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.55502057075500488,
+                        0,
+                        -0.024721324443817139,
+                        0.034902989864349365,
+                        0,
+                        1
+                      ]
+                    }
+                  }
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "scene",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.91352570056915283,
+                  6.9387757761774083e-09,
+                  0.40678116679191589,
+                  0,
+                  0.18340523540973663,
+                  0.8925899863243103,
+                  -0.41188079118728638,
+                  0,
+                  -0.36308884620666504,
+                  0.45086926221847534,
+                  0.81540375947952271,
+                  0,
+                  -0.12960775196552277,
+                  0.45507436990737915,
+                  1.0015150308609009,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        }
+      ],
+      "tags" : {
+        "__content" : [
+          {
+            "tagsStore" : {
+
+            }
+          }
+        ],
+        "__version" : 1
+      }
+    }
+  ],
+  "__version" : 1
+}
