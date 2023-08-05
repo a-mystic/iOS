@@ -46,3 +46,21 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+struct mystic: View {
+    var body: some View {
+        VStack {
+            Text("mystic")
+                .opacity(isShow ? 1 : 0)
+            Button {
+                isShow.toggle()
+            } label: {
+                Text("change")
+            }
+        }
+    }
+    
+    @State private var isShow = false
+}
+
