@@ -19,8 +19,10 @@ struct NewMessageView: View {
             ScrollView {
                 Text(viewModel.errorMessage)
                 ForEach(viewModel.users) { user in
-                    createOtherUser(user)
-                    Divider().padding(.vertical, 8)
+                    if !isCurrentUser(user) {
+                        createOtherUser(user)
+                        Divider().padding(.vertical, 8)
+                    }
                 }
             }
             .navigationTitle("New Message")
@@ -30,6 +32,10 @@ struct NewMessageView: View {
                 }
             }
         }
+    }
+    
+    private func isCurrentUser(_ user: ChatUser) -> Bool {
+        FireBaseManager.manager.auth.currentUser?.uid == user.uid
     }
     
     func createOtherUser(_ user: ChatUser) -> some View {

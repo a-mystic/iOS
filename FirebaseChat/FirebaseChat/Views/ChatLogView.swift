@@ -22,8 +22,8 @@ struct ChatLogView: View {
             messageBody
             Text(viewModel.errorMessage)
         }
-            .navigationTitle(chatUser?.email ?? "")
-            .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(chatUser?.email ?? "")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func isCurrentUser(_ user: ChatMessage) -> Bool {
@@ -33,16 +33,26 @@ struct ChatLogView: View {
     var messageBody: some View {
         VStack {
             ScrollView {
-                ForEach(viewModel.chatMessages) { message in
+                ScrollViewReader { scrollViewProxy  in
                     VStack {
-                        if isCurrentUser(message) {
-                            textMessage(message.text, color: .black, position: .trailing)
-                        } else {
-                            textMessage(message.text, color: .white, position: .leading)
+                        ForEach(viewModel.chatMessages) { message in
+                            VStack {
+                                if isCurrentUser(message) {
+                                    textMessage(message.text, color: .black, position: .trailing)
+                                } else {
+                                    textMessage(message.text, color: .white, position: .leading)
+                                }
+                            }
+                        }
+                        HStack { Spacer() }
+                            .id("Empty")
+                    }
+                    .onReceive(viewModel.$scroll) { _ in
+                        withAnimation(.easeOut(duration: 0.5)) {
+                            scrollViewProxy.scrollTo("Empty", anchor: .bottom)
                         }
                     }
                 }
-                HStack { Spacer() }
             }
             .background(Color.gray.overlay(.regularMaterial))
             .safeAreaInset(edge: .bottom) { messageField }

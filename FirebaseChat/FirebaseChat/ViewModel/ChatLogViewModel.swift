@@ -18,6 +18,7 @@ class ChatLogViewModel: ObservableObject {
     
     @Published var chatText = ""
     @Published var errorMessage = ""
+    @Published var scroll = false
     
     func send() {
         guard let fromId = FireBaseManager.manager.auth.currentUser?.uid else { return }
@@ -38,7 +39,9 @@ class ChatLogViewModel: ObservableObject {
                 self.errorMessage = "Failed to save message into FireStore: \(error)"
                 return
             }
+            self.saveRecentMessage()
             self.chatText = ""
+            self.scroll.toggle()
         }
         let recipientMessageDocument = FireBaseManager.manager.firestore
             .collection("messages")
@@ -49,6 +52,29 @@ class ChatLogViewModel: ObservableObject {
             if let error = error {
                 self.errorMessage = "Failed to save message into FireStore: \(error)"
                 return
+            }
+        }
+    }
+    
+    private func saveRecentMessage() {
+        guard let uid = FireBaseManager.manager.auth.currentUser?.uid else { return }
+        guard let toId = self.chatUser?.uid else { return }
+        let document = FireBaseManager.manager.firestore
+            .collection("recent_messages")
+            .document(uid)
+            .collection("messages")
+            .document(toId)
+        let data = [
+            "timestamp" : Timestamp(),
+            FirebaseConstants.text : self.chatText,
+            FirebaseConstants.fromId : uid,
+            FirebaseConstants.toId : toId,
+            FirebaseConstants.profileImageUrl : chatUser?.profileImageUrl ?? "",
+            FirebaseConstants.email : chatUser?.email ?? ""
+        ] as [String : Any]
+        document.setData(data) { error in
+            if let error = error {
+                self.errorMessage = "Failed to save recent message: \(error)"
             }
         }
     }
@@ -74,6 +100,9 @@ class ChatLogViewModel: ObservableObject {
                         self.chatMessages.append(ChatMessage(documentId: change.document.documentID, data: data))
                     }
                 })
+                DispatchQueue.main.async {
+                    self.scroll.toggle()
+                }
 //                snapshot?.documents.forEach({ documentSnapshot in
 //                    let data = documentSnapshot.data()
 //                    let documentId = documentSnapshot.documentID

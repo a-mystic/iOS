@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MessagesView: View {
+    @ObservedObject private var viewModel = MessagesViewModel()
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -27,29 +29,51 @@ struct MessagesView: View {
     }
     
     var chatList: some View {
-        ForEach(0..<10, id: \.self) { number in
+        ForEach(viewModel.recentMessages) { message in
             VStack {
                 NavigationLink {
-                    Text("Destination")
+                    let data = [
+                        "uid" : message.id ?? "",
+                        "email" : message.email,
+                        "profileImageUrl" : message.profileImageUrl
+                    ] as [String:Any]
+                    ChatLogView(chatUser: ChatUser(data: data))
                 } label: {
                     HStack(spacing: 16) {
-                        Image(systemName: "person.fill")
-                            .font(.system(size: 32))
-                            .padding(8)
-                        VStack(alignment: .leading) {
-                            Text("Username").font(.system(size: 16, weight: .bold))
-                            Text("Message sent to user")
+                        profileImage(message)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(message.email)
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(Color(.label))
+                            Text(message.text)
                                 .font(.system(size: 14))
                                 .foregroundColor(Color.gray)
                         }
                         Spacer()
-                        Text("22d").font(.system(size: 14, weight: .semibold))
+//                        let timeInterval = message.timestamp.timeIntervalSinceNow.description
+                        Text(message.timestamp.description).font(.system(size: 14, weight: .semibold))
                     }
                 }
                 Divider().padding(.vertical, 8)
             }
             .padding(.horizontal)
         }
+    }
+    
+    @ViewBuilder
+    func profileImage(_ message: RecentMessage) -> some View {
+        let url = URL(string: message.profileImageUrl)
+        AsyncImage(url: url, content: { image in
+            image
+                .resizable()
+                .scaledToFill()
+                .frame(width: 64, height: 64)
+                .clipped()
+                .cornerRadius(64)
+                .shadow(radius: 2)
+        }, placeholder: {
+            ProgressView()
+        })
     }
     
     @State private var showNewMessage = false
