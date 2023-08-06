@@ -9,6 +9,8 @@ import SwiftUI
 import PhotosUI
 
 struct LoginView: View {
+    let CompleteLogin: () -> Void
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -126,6 +128,7 @@ struct LoginView: View {
                 return
             }
             loginStatusMessage = "Successfully logged in user: \(result?.user.uid ?? "")"
+            self.CompleteLogin()
         }
     }
     
@@ -137,6 +140,10 @@ struct LoginView: View {
     }
     
     private func createNewAccount() {
+        if self.selectedImage == nil {
+            self.loginStatusMessage = "You must select profile image."
+            return
+        }
         FireBaseManager.manager.auth.createUser(withEmail: email, password: password) { result, err in
             if let err = err {
                 print("Failed to create user: ", err)
@@ -149,7 +156,7 @@ struct LoginView: View {
     }
     
     private func saveImageToStorage() {
-        let filename = UUID().uuidString
+        let _ = UUID().uuidString
         guard let uid = FireBaseManager.manager.auth.currentUser?.uid else { return }
         let ref = FireBaseManager.manager.storage.reference(withPath: uid)
         guard let imageData = selectedImageData else { return }
@@ -184,12 +191,13 @@ struct LoginView: View {
                     loginStatusMessage = "\(err)"
                     return
                 }
+                self.CompleteLogin()
             }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView { }
     }
 }
