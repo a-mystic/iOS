@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
-    @ObservedObject private var viewModel = MessagesViewModel()
+    @ObservedObject private var viewModel = MessagesViewModel.manager
     
     var body: some View {
         List {

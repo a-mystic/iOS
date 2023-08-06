@@ -13,6 +13,8 @@ class MessagesViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var chatUser: ChatUser?
     
+    static let manager = MessagesViewModel()
+    
     init() {
         self.isUserLoggedOut = FireBaseManager.manager.auth.currentUser?.uid == nil
         fetchCurrentUser()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MessagesView: View {
-    @ObservedObject private var viewModel = MessagesViewModel()
+    @ObservedObject private var viewModel = MessagesViewModel.manager
     
     var body: some View {
         NavigationStack {
@@ -24,6 +24,12 @@ struct MessagesView: View {
             }
             .navigationDestination(isPresented: $showChatLogView) {
                 ChatLogView(chatUser: self.chatUser)
+            }
+        }
+        .fullScreenCover(isPresented: $viewModel.isUserLoggedOut) {
+            LoginView {
+                self.viewModel.isUserLoggedOut = false
+                self.viewModel.fetchCurrentUser()
             }
         }
     }
