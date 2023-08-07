@@ -61,6 +61,11 @@ struct mystic: View {
         }
     }
     
+    func a() {
+        let data = [1, 2, 3]
+        let set = Set(data)
+    }
+    
     @State private var isShow = false
 }
 
