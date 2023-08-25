@@ -11,28 +11,7 @@ struct ContentView: View {
     @State private var sliderValue: Double = 0.0
 
     var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                let yPos = geometry.size.height / 2 * (1 - CGFloat(sin(self.sliderValue * 2 * .pi)))
-                
-                Text("Hello, SwiftUI")
-                    .position(x: self.sliderValue * geometry.size.width, y: yPos)
-                    .animation(.easeInOut(duration: 0.3), value: self.sliderValue) // 애니메이션 적용
-            }
-            .frame(height: 200)
-            .onAppear {
-                DispatchQueue.global().async { // 비동기적으로 값 변경
-                    for _ in 0..<1000 {
-                        DispatchQueue.main.async {
-                            withAnimation(.linear(duration: 0.3)) {
-                                self.sliderValue += 0.001
-                            }
-                        }
-                        usleep(1000) // 작은 딜레이를 줘서 값이 천천히 변경되도록 함
-                    }
-                }
-            }
-        }
+        wave()
 
 
 //        Button("Change") {
@@ -93,36 +72,42 @@ struct mystic: View {
     
     func a() {
         let data = [1, 2, 3]
-        let set = Set(data)
     }
     
     @State private var isShow = false
 }
 
 struct wave: View {
-    @State private var sliderValue: Double = 0.0
+    @State private var waveValue: Double = 0.0
 
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                let yPos = geometry.size.height / 2 * (1 - CGFloat(sin(self.sliderValue * 2 * .pi)))
-                
+                let yPos = geometry.size.height / 2 * (1 - CGFloat(sin(waveValue * 2 * .pi)))
                 Text("Hello, SwiftUI")
-                    .position(x: self.sliderValue * geometry.size.width, y: yPos)
-                    .animation(.easeInOut(duration: 0.3), value: self.sliderValue) // 애니메이션 적용
+                    .position(x: self.waveValue * geometry.size.width, y: yPos)
+                    .animation(.easeInOut(duration: 0.3), value: waveValue)
             }
             .frame(height: 200)
-            .onAppear {
-                DispatchQueue.global().async { // 비동기적으로 값 변경
-                    for _ in 0..<1000 {
-                        DispatchQueue.main.async {
-                            withAnimation(.linear(duration: 0.3)) {
-                                self.sliderValue += 0.001
-                            }
-                        }
-                        usleep(1000) // 작은 딜레이를 줘서 값이 천천히 변경되도록 함
-                    }
+            .onAppear { wave() }
+            waveButton
+        }
+    }
+    
+    var waveButton: some View {
+        Button("Wave") {
+            wave()
+        }
+    }
+    
+    private func wave() {
+        waveValue = 0
+        Task {
+            for _ in 0..<1000 {
+                withAnimation(.linear(duration: 0.3)) {
+                    waveValue += 0.001
                 }
+                usleep(1000)
             }
         }
     }
