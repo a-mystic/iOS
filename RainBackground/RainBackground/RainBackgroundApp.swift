@@ -1,14 +1,14 @@
 //
-//  spriteviewApp.swift
-//  spriteview
+//  RainBackgroundApp.swift
+//  RainBackground
 //
-//  Created by mystic on 2022/06/01.
+//  Created by a mystic on 2023/08/26.
 //
 
 import SwiftUI
 
 @main
-struct spriteviewApp: App {
+struct RainBackgroundApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

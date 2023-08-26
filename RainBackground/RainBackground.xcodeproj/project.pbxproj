@@ -3,30 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4ACC07C728477E710001B8A3 /* spriteviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC07C628477E710001B8A3 /* spriteviewApp.swift */; };
-		4ACC07C928477E710001B8A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC07C828477E710001B8A3 /* ContentView.swift */; };
-		4ACC07CB28477E730001B8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC07CA28477E730001B8A3 /* Assets.xcassets */; };
-		4ACC07CE28477E730001B8A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC07CD28477E730001B8A3 /* Preview Assets.xcassets */; };
-		4ACC07D528477E890001B8A3 /* rainfall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC07D428477E890001B8A3 /* rainfall.sks */; };
-		4ACC07D7284781BE0001B8A3 /* rainfalllanding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC07D6284781BE0001B8A3 /* rainfalllanding.sks */; };
+		4A03216E2A99ACEE003D0FF8 /* RainBackgroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03216D2A99ACEE003D0FF8 /* RainBackgroundApp.swift */; };
+		4A0321702A99ACEE003D0FF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03216F2A99ACEE003D0FF8 /* ContentView.swift */; };
+		4A0321722A99ACEF003D0FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0321712A99ACEF003D0FF8 /* Assets.xcassets */; };
+		4A0321752A99ACEF003D0FF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0321742A99ACEF003D0FF8 /* Preview Assets.xcassets */; };
+		4A03217D2A99AD25003D0FF8 /* rainfall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A03217B2A99AD25003D0FF8 /* rainfall.sks */; };
+		4A03217E2A99AD25003D0FF8 /* rainfalllanding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A03217C2A99AD25003D0FF8 /* rainfalllanding.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4ACC07C328477E710001B8A3 /* spriteview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spriteview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ACC07C628477E710001B8A3 /* spriteviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spriteviewApp.swift; sourceTree = "<group>"; };
-		4ACC07C828477E710001B8A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4ACC07CA28477E730001B8A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4ACC07CD28477E730001B8A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4ACC07D428477E890001B8A3 /* rainfall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rainfall.sks; sourceTree = "<group>"; };
-		4ACC07D6284781BE0001B8A3 /* rainfalllanding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rainfalllanding.sks; sourceTree = "<group>"; };
+		4A03216A2A99ACEE003D0FF8 /* RainBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A03216D2A99ACEE003D0FF8 /* RainBackgroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainBackgroundApp.swift; sourceTree = "<group>"; };
+		4A03216F2A99ACEE003D0FF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A0321712A99ACEF003D0FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A0321742A99ACEF003D0FF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A03217B2A99AD25003D0FF8 /* rainfall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rainfall.sks; sourceTree = "<group>"; };
+		4A03217C2A99AD25003D0FF8 /* rainfalllanding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rainfalllanding.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4ACC07C028477E710001B8A3 /* Frameworks */ = {
+		4A0321672A99ACEE003D0FF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,39 +36,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4ACC07BA28477E710001B8A3 = {
+		4A0321612A99ACEE003D0FF8 = {
 			isa = PBXGroup;
 			children = (
-				4ACC07C528477E710001B8A3 /* spriteview */,
-				4ACC07C428477E710001B8A3 /* Products */,
+				4A03216C2A99ACEE003D0FF8 /* RainBackground */,
+				4A03216B2A99ACEE003D0FF8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4ACC07C428477E710001B8A3 /* Products */ = {
+		4A03216B2A99ACEE003D0FF8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4ACC07C328477E710001B8A3 /* spriteview.app */,
+				4A03216A2A99ACEE003D0FF8 /* RainBackground.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4ACC07C528477E710001B8A3 /* spriteview */ = {
+		4A03216C2A99ACEE003D0FF8 /* RainBackground */ = {
 			isa = PBXGroup;
 			children = (
-				4ACC07C628477E710001B8A3 /* spriteviewApp.swift */,
-				4ACC07C828477E710001B8A3 /* ContentView.swift */,
-				4ACC07D6284781BE0001B8A3 /* rainfalllanding.sks */,
-				4ACC07D428477E890001B8A3 /* rainfall.sks */,
-				4ACC07CA28477E730001B8A3 /* Assets.xcassets */,
-				4ACC07CC28477E730001B8A3 /* Preview Content */,
+				4A03216D2A99ACEE003D0FF8 /* RainBackgroundApp.swift */,
+				4A03216F2A99ACEE003D0FF8 /* ContentView.swift */,
+				4A0321712A99ACEF003D0FF8 /* Assets.xcassets */,
+				4A03217B2A99AD25003D0FF8 /* rainfall.sks */,
+				4A03217C2A99AD25003D0FF8 /* rainfalllanding.sks */,
+				4A0321732A99ACEF003D0FF8 /* Preview Content */,
 			);
-			path = spriteview;
+			path = RainBackground;
 			sourceTree = "<group>";
 		};
-		4ACC07CC28477E730001B8A3 /* Preview Content */ = {
+		4A0321732A99ACEF003D0FF8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4ACC07CD28477E730001B8A3 /* Preview Assets.xcassets */,
+				4A0321742A99ACEF003D0FF8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -76,90 +76,90 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4ACC07C228477E710001B8A3 /* spriteview */ = {
+		4A0321692A99ACEE003D0FF8 /* RainBackground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4ACC07D128477E730001B8A3 /* Build configuration list for PBXNativeTarget "spriteview" */;
+			buildConfigurationList = 4A0321782A99ACEF003D0FF8 /* Build configuration list for PBXNativeTarget "RainBackground" */;
 			buildPhases = (
-				4ACC07BF28477E710001B8A3 /* Sources */,
-				4ACC07C028477E710001B8A3 /* Frameworks */,
-				4ACC07C128477E710001B8A3 /* Resources */,
+				4A0321662A99ACEE003D0FF8 /* Sources */,
+				4A0321672A99ACEE003D0FF8 /* Frameworks */,
+				4A0321682A99ACEE003D0FF8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = spriteview;
-			productName = spriteview;
-			productReference = 4ACC07C328477E710001B8A3 /* spriteview.app */;
+			name = RainBackground;
+			productName = RainBackground;
+			productReference = 4A03216A2A99ACEE003D0FF8 /* RainBackground.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4ACC07BB28477E710001B8A3 /* Project object */ = {
+		4A0321622A99ACEE003D0FF8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					4ACC07C228477E710001B8A3 = {
-						CreatedOnToolsVersion = 13.4;
+					4A0321692A99ACEE003D0FF8 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 4ACC07BE28477E710001B8A3 /* Build configuration list for PBXProject "spriteview" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 4A0321652A99ACEE003D0FF8 /* Build configuration list for PBXProject "RainBackground" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4ACC07BA28477E710001B8A3;
-			productRefGroup = 4ACC07C428477E710001B8A3 /* Products */;
+			mainGroup = 4A0321612A99ACEE003D0FF8;
+			productRefGroup = 4A03216B2A99ACEE003D0FF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4ACC07C228477E710001B8A3 /* spriteview */,
+				4A0321692A99ACEE003D0FF8 /* RainBackground */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4ACC07C128477E710001B8A3 /* Resources */ = {
+		4A0321682A99ACEE003D0FF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ACC07D7284781BE0001B8A3 /* rainfalllanding.sks in Resources */,
-				4ACC07CE28477E730001B8A3 /* Preview Assets.xcassets in Resources */,
-				4ACC07D528477E890001B8A3 /* rainfall.sks in Resources */,
-				4ACC07CB28477E730001B8A3 /* Assets.xcassets in Resources */,
+				4A03217E2A99AD25003D0FF8 /* rainfalllanding.sks in Resources */,
+				4A0321752A99ACEF003D0FF8 /* Preview Assets.xcassets in Resources */,
+				4A03217D2A99AD25003D0FF8 /* rainfall.sks in Resources */,
+				4A0321722A99ACEF003D0FF8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4ACC07BF28477E710001B8A3 /* Sources */ = {
+		4A0321662A99ACEE003D0FF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ACC07C928477E710001B8A3 /* ContentView.swift in Sources */,
-				4ACC07C728477E710001B8A3 /* spriteviewApp.swift in Sources */,
+				4A0321702A99ACEE003D0FF8 /* ContentView.swift in Sources */,
+				4A03216E2A99ACEE003D0FF8 /* RainBackgroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4ACC07CF28477E730001B8A3 /* Debug */ = {
+		4A0321762A99ACEF003D0FF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -203,7 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -213,13 +213,13 @@
 			};
 			name = Debug;
 		};
-		4ACC07D028477E730001B8A3 /* Release */ = {
+		4A0321772A99ACEF003D0FF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -257,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -267,14 +267,15 @@
 			};
 			name = Release;
 		};
-		4ACC07D228477E730001B8A3 /* Debug */ = {
+		4A0321792A99ACEF003D0FF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"spriteview/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RainBackground/Preview Content\"";
+				DEVELOPMENT_TEAM = 96B293Z3Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -287,7 +288,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mystic.spriteview;
+				PRODUCT_BUNDLE_IDENTIFIER = mystic.RainBackground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,14 +296,15 @@
 			};
 			name = Debug;
 		};
-		4ACC07D328477E730001B8A3 /* Release */ = {
+		4A03217A2A99ACEF003D0FF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"spriteview/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RainBackground/Preview Content\"";
+				DEVELOPMENT_TEAM = 96B293Z3Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -315,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mystic.spriteview;
+				PRODUCT_BUNDLE_IDENTIFIER = mystic.RainBackground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,25 +328,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4ACC07BE28477E710001B8A3 /* Build configuration list for PBXProject "spriteview" */ = {
+		4A0321652A99ACEE003D0FF8 /* Build configuration list for PBXProject "RainBackground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4ACC07CF28477E730001B8A3 /* Debug */,
-				4ACC07D028477E730001B8A3 /* Release */,
+				4A0321762A99ACEF003D0FF8 /* Debug */,
+				4A0321772A99ACEF003D0FF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4ACC07D128477E730001B8A3 /* Build configuration list for PBXNativeTarget "spriteview" */ = {
+		4A0321782A99ACEF003D0FF8 /* Build configuration list for PBXNativeTarget "RainBackground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4ACC07D228477E730001B8A3 /* Debug */,
-				4ACC07D328477E730001B8A3 /* Release */,
+				4A0321792A99ACEF003D0FF8 /* Debug */,
+				4A03217A2A99ACEF003D0FF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4ACC07BB28477E710001B8A3 /* Project object */;
+	rootObject = 4A0321622A99ACEE003D0FF8 /* Project object */;
 }
