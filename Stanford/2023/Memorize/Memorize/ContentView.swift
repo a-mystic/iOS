@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         HStack {
             ForEach(0..<4) { _ in
-                CardView(isFaceUp: false)
+                CardView(isFaceUp: true)
             }
         }
         .foregroundColor(.orange)
@@ -20,17 +20,21 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    var isFaceUp = false
+    @State var isFaceUp = false
     
     var body: some View {
+        var base = RoundedRectangle(cornerRadius: 12)
         ZStack {
             if isFaceUp {
-                RoundedRectangle(cornerRadius: 12).foregroundColor(.white)
-                RoundedRectangle(cornerRadius: 12).strokeBorder(lineWidth: 2)
+                base.fill(.white)
+                base.strokeBorder(lineWidth: 2)
                 Text("👻").font(.largeTitle)
             } else {
-                RoundedRectangle(cornerRadius: 12)
+                base.fill()
             }
+        }
+        .onTapGesture {
+            isFaceUp.toggle()
         }
     }
 }
