@@ -28,17 +28,25 @@ func dummyStructValueChange(_ dummy: dummyStruct, to value: Int) {
     dummyTwo.changeOfA(to: value)
 }
 
-var parentClass = dummyClass()
-//parentClass.a = 1
-dummyClassValueChange(parentClass, to: 1)
-print(parentClass.a)
-var childClass = parentClass
-childClass.a = 2
-print(parentClass.a)
+//var parentClass = dummyClass()
+////parentClass.a = 1
+//dummyClassValueChange(parentClass, to: 1)
+//print(parentClass.a)
+//var childClass = parentClass
+//childClass.a = 2
+//print(parentClass.a)
+//
+//var parentStruct = dummyStruct()
+//parentStruct.changeOfA(to: 1)
+//print(parentStruct.a)
+//var childStruct = parentStruct
+//childStruct.changeOfA(to: 2)
+//print(parentStruct.a)
 
-var parentStruct = dummyStruct()
-parentStruct.changeOfA(to: 1)
-print(parentStruct.a)
-var childStruct = parentStruct
-childStruct.changeOfA(to: 2)
-print(parentStruct.a)
+func inoutTest(lhs: inout Int, rhs: Int) {
+    lhs += rhs
+}
+
+var lhs = 0
+inoutTest(lhs: &lhs, rhs: 3)
+print(lhs)
