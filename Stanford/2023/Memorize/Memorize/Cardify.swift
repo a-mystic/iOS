@@ -11,6 +11,7 @@ struct Cardify: ViewModifier, Animatable {
     init(isFaceUp: Bool) {
         rotation = isFaceUp ? 0 : 180
     }
+    
     var isFaceUp: Bool {
         rotation < 90
     }

@@ -9,9 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var sliderValue: Double = 0.0
+    
+    @State private var xPosition: CGFloat = 100
 
     var body: some View {
-        wave()
+        VStack {
+            TimelineView(.periodic(from: .now, by: 0.1)) { timeline in
+                Text("👻")
+                    .position(x: xPosition)
+                    .animation(.linear(duration: 3), value: xPosition)
+                    .onAppear {
+                        xPosition = 600
+                    }
+                    }
+                }
+            }
 
 
 //        Button("Change") {
@@ -31,7 +43,6 @@ struct ContentView: View {
 //        .overlay {
 //            cont
 //        }
-    }
     
     @State private var show = false
     
