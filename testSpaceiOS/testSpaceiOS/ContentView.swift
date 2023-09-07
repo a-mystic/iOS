@@ -13,16 +13,17 @@ struct ContentView: View {
     @State private var xPosition: CGFloat = 100
 
     var body: some View {
-        VStack {
-            TimelineView(.periodic(from: .now, by: 0.1)) { timeline in
-                Text("👻")
-                    .position(x: xPosition)
-                    .animation(.linear(duration: 3), value: xPosition)
-                    .onAppear {
-                        xPosition = 600
-                    }
-                    }
-                }
+        AnimationView()
+//        VStack {
+//            TimelineView(.periodic(from: .now, by: 0.1)) { timeline in
+//                Text("👻")
+//                    .position(x: xPosition)
+//                    .animation(.linear(duration: 3), value: xPosition)
+//                    .onAppear {
+//                        xPosition = 600
+//                    }
+//                    }
+//                }
             }
 
 
@@ -50,6 +51,32 @@ struct ContentView: View {
         Button("transition") {
             withAnimation {
                 show.toggle()
+            }
+        }
+    }
+}
+
+struct AnimationView: View, Animatable {
+    var animatableData: CGFloat {
+        get { offset }
+        set { offset = newValue }
+    }
+    
+    @State private var offset: CGFloat = .zero
+    
+    var body: some View {
+        VStack {
+            Text("👻")
+                .position(x: 50, y: 200)
+                .offset(x: offset)
+                .animation(.linear(duration: 3), value: offset)
+            if offset > 200 {
+                Text("🌟")
+            }
+            Button("Animate") {
+                withAnimation {
+                    offset = 300
+                }
             }
         }
     }

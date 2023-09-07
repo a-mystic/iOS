@@ -43,10 +43,23 @@ func dummyStructValueChange(_ dummy: dummyStruct, to value: Int) {
 //childStruct.changeOfA(to: 2)
 //print(parentStruct.a)
 
-func inoutTest(lhs: inout Int, rhs: Int) {
-    lhs += rhs
+//func inoutTest(lhs: inout Int, rhs: Int) {
+//    lhs += rhs
+//}
+//
+//var lhs = 0
+//inoutTest(lhs: &lhs, rhs: 3)
+//print(lhs)
+func non() {
+    
 }
 
-var lhs = 0
-inoutTest(lhs: &lhs, rhs: 3)
-print(lhs)
+func dummyAsync() async {
+    for _ in 200 {
+        non()
+    }
+    print("async")
+}
+
+await dummyAsync()
+print("not")
