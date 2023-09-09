@@ -55,7 +55,7 @@ func non() {
 }
 
 func dummyAsync() async {
-    for _ in 200 {
+    for _ in 0..<200 {
         non()
     }
     print("async")
@@ -63,3 +63,11 @@ func dummyAsync() async {
 
 await dummyAsync()
 print("not")
+
+struct dummyStructTwo {
+    var dummyValue = 3
+    
+    mutating func change() {
+        dummyValue = 5
+    }
+}
