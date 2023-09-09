@@ -9,11 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var sliderValue: Double = 0.0
-    
     @State private var xPosition: CGFloat = 100
+    @State private var isShow = false
 
     var body: some View {
-        AnimationView()
+        VStack {
+            if isShow {
+                Text("👻")
+                    .font(.largeTitle)
+                    .transition(.scale(scale: 3).animation(.linear(duration: 3).repeatForever()))
+            }
+            Text("☃️")
+                .transition(.asymmetric(insertion: .scale(scale: 3).animation(.linear(duration: 3).repeatForever()), removal: .identity))
+        }
+        .onAppear {
+            isShow.toggle()
+        }
 //        VStack {
 //            TimelineView(.periodic(from: .now, by: 0.1)) { timeline in
 //                Text("👻")
@@ -56,32 +67,6 @@ struct ContentView: View {
     }
 }
 
-struct AnimationView: View, Animatable {
-    var animatableData: CGFloat {
-        get { offset }
-        set { offset = newValue }
-    }
-    
-    @State private var offset: CGFloat = .zero
-    
-    var body: some View {
-        VStack {
-            Text("👻")
-                .position(x: 50, y: 200)
-                .offset(x: offset)
-                .animation(.linear(duration: 3), value: offset)
-            if offset > 200 {
-                Text("🌟")
-            }
-            Button("Animate") {
-                withAnimation {
-                    offset = 300
-                }
-            }
-        }
-    }
-}
-
 class dummyController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,10 +91,6 @@ struct mystic: View {
                 Text("change")
             }
         }
-    }
-    
-    func a() {
-        let data = [1, 2, 3]
     }
     
     @State private var isShow = false
