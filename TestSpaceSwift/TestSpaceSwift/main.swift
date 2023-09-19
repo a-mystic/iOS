@@ -50,24 +50,28 @@ func dummyStructValueChange(_ dummy: dummyStruct, to value: Int) {
 //var lhs = 0
 //inoutTest(lhs: &lhs, rhs: 3)
 //print(lhs)
-func non() {
-    
-}
+//func non() {
+//
+//}
+//
+//func dummyAsync() async {
+//    for _ in 0..<200 {
+//        non()
+//    }
+//    print("async")
+//}
+//
+//await dummyAsync()
+//print("not")
+//
+//struct dummyStructTwo {
+//    var dummyValue = 3
+//
+//    mutating func change() {
+//        dummyValue = 5
+//    }
+//}
 
-func dummyAsync() async {
-    for _ in 0..<200 {
-        non()
-    }
-    print("async")
-}
+let randomNumber = Int.random(in: 4..<14)
 
-await dummyAsync()
-print("not")
-
-struct dummyStructTwo {
-    var dummyValue = 3
-    
-    mutating func change() {
-        dummyValue = 5
-    }
-}
+print(randomNumber)

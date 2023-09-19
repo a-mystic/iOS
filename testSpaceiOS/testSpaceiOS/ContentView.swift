@@ -13,18 +13,26 @@ struct ContentView: View {
     @State private var isShow = false
 
     var body: some View {
-        VStack {
-            if isShow {
-                Text("👻")
-                    .font(.largeTitle)
-                    .transition(.scale(scale: 3).animation(.linear(duration: 3).repeatForever()))
+        Button("Fetch") {
+            Task {
+                let one = await fetchone()
+                let two = await fetchtwo(one)
+                let three = await fetchthree(two)
+                print(three)
             }
-            Text("☃️")
-                .transition(.asymmetric(insertion: .scale(scale: 3).animation(.linear(duration: 3).repeatForever()), removal: .identity))
         }
-        .onAppear {
-            isShow.toggle()
-        }
+//        VStack {
+//            if isShow {
+//                Text("👻")
+//                    .font(.largeTitle)
+//                    .transition(.scale(scale: 3).animation(.linear(duration: 3).repeatForever()))
+//            }
+//            Text("☃️")
+//                .transition(.asymmetric(insertion: .scale(scale: 3).animation(.linear(duration: 3).repeatForever()), removal: .identity))
+//        }
+//        .onAppear {
+//            isShow.toggle()
+//        }
 //        VStack {
 //            TimelineView(.periodic(from: .now, by: 0.1)) { timeline in
 //                Text("👻")
@@ -64,6 +72,18 @@ struct ContentView: View {
                 show.toggle()
             }
         }
+    }
+    
+    private func fetchone() async -> String {
+        return "1"
+    }
+    
+    private func fetchtwo(_ str: String) async -> String {
+        return str + "2"
+    }
+    
+    private func fetchthree(_ str: String) async -> String {
+        return str + "3"
     }
 }
 
