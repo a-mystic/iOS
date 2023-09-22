@@ -72,6 +72,14 @@ func dummyStructValueChange(_ dummy: dummyStruct, to value: Int) {
 //    }
 //}
 
-let randomNumber = Int.random(in: 4..<14)
+//let randomNumber = Int.random(in: 4..<14)
+//
+//print(randomNumber)
 
-print(randomNumber)
+let number = 4
+
+if number == 3 {
+    
+} else if number == 4 {
+    print("found")
+}
