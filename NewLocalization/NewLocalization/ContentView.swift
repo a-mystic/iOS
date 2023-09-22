@@ -8,12 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let localizedString: LocalizedStringKey = "Hello"
+    @State private var state: States = .one
+    
+    enum States {
+        case one
+        case two
+        
+        var status: LocalizedStringKey {
+            switch self {
+            case .one:
+                return "one"
+            case .two:
+                return "two"
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(localizedString)
+            Text(state.status)
+            Button("change") {
+                state = .two
+            }
         }
         .padding()
     }
