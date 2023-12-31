@@ -6,21 +6,61 @@
 //
 
 import SwiftUI
+import SwiftData
+
+@Model
+class data {
+    var content: Data
+    
+    init(content: Data) {
+        self.content = content
+    }
+}
 
 struct ContentView: View {
     @State private var sliderValue: Double = 0.0
     @State private var xPosition: CGFloat = 100
     @State private var isShow = false
 
+    private let ironmanThumnail = URL(string: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg")
+    
+    @State private var commands: [String] = ["", "", ""]
+    
     var body: some View {
-        Button("Fetch") {
-            Task {
-                let one = await fetchone()
-                let two = await fetchtwo(one)
-                let three = await fetchthree(two)
-                print(three)
+        VStack {
+            ForEach(0..<commands.count, id: \.self) { index in
+                TextField("\(index)", text: $commands[index])
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.horizontal)
             }
         }
+//        Text("Hello")
+//            .foregroundStyle(.white)
+//            .padding()
+//            .background {
+//                Color.blue
+//                    .clipShape(RoundedRectangle(cornerRadius: 10))
+//            }
+//        AsyncImage(url: ironmanThumnail) { image in
+//            image
+//                .resizable()
+//                .frame(width: 300, height: 300)
+//        } placeholder: {
+//            ProgressView()
+//        }
+//        .onAppear {
+//            printData()
+//        }
+
+
+//        Button("Fetch") {
+//            Task {
+//                let one = await fetchone()
+//                let two = await fetchtwo(one)
+//                let three = await fetchthree(two)
+//                print(three)
+//            }
+//        }
 //        VStack {
 //            if isShow {
 //                Text("👻")
@@ -63,6 +103,16 @@ struct ContentView: View {
 //        .overlay {
 //            cont
 //        }
+    
+    private func getDataFromImage() -> Data? {
+        return UIImage(named: "binary")?.pngData()
+    }
+    
+    private func printData() {
+        if let data = getDataFromImage() {
+            print(data)
+        }
+    }
     
     @State private var show = false
     

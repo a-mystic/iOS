@@ -15,8 +15,7 @@ class RequestAPI: ObservableObject {
     @Published var number : Int = 0
     
     func fetchData(){
-        
-        guard let url = URL(string: "url") else{
+        guard let url = URL(string: "url") else {
             return
         }
         let session = URLSession(configuration: .default)

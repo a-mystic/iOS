@@ -15,6 +15,7 @@ struct ContentView: View {
         "ESTJ", "ESFJ", "ENFJ", "ENTJ"
     ]
     @AppStorage("MBTI") private var mbti: String = "None"
+    @AppStorage("Saved") private var saved: Bool = false
     @State private var needData = false
     
     
@@ -33,11 +34,7 @@ struct ContentView: View {
                         Text("MBTI를 선택해주세요.")
                         mbtiPicker
                     }
-                    HStack {
-                        Spacer()
-                        submit
-                        Spacer()
-                    }
+                    submit
                 }
             }
     }
@@ -54,9 +51,16 @@ struct ContentView: View {
     }
     
     private var submit: some View {
-        Button("submit") {
+        Button {
             needData = false
+        } label: {
+            HStack {
+                Spacer()
+                Text("Submit")
+                Spacer()
+            }
         }
+        .padding()
         .buttonStyle(.borderedProminent)
     }
 }
