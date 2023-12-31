@@ -142,4 +142,13 @@ import NaturalLanguage
 //
 //print(data.coefficientOfVariation())
 
+var index: UInt64 = 0
+for i in 0..<1000 {
+    index += 1
+}
 
+print(index)
+
+print(Int.max)
+print(UInt32.max)
+print(UInt64.max)
