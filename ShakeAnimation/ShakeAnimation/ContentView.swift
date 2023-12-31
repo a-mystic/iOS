@@ -16,7 +16,7 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 7)
                 .frame(width: 100, height: 100)
                 .shake(with: numberOfShakes)
-            Button("Check") {
+            Button("Shake") {
                 numberOfShakes = 0
                 withAnimation(.easeInOut(duration: 1)) {
                     numberOfShakes = 5
@@ -46,7 +46,7 @@ struct Shake: AnimatableModifier {
 
 extension View {
     func shake(with shakes: CGFloat) -> some View {
-        modifier(Shake(shakes: shakes))
+        self.modifier(Shake(shakes: shakes))
     }
 }
 
