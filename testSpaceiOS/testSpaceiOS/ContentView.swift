@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Charts
 
 @Model
 class data {
@@ -17,23 +18,78 @@ class data {
     }
 }
 
+struct ChartData {
+    var index: Int
+    var value: Int
+}
+
 struct ContentView: View {
     @State private var sliderValue: Double = 0.0
     @State private var xPosition: CGFloat = 100
     @State private var isShow = false
+    
+    private let datas: [ChartData] = [
+        .init(index: 0, value: 0),
+        .init(index: 1, value: 1),
+        .init(index: 2, value: 2),
+        .init(index: 3, value: 3),
+        .init(index: 4, value: 4),
+        .init(index: 5, value: 5)
+    ]
 
     private let ironmanThumnail = URL(string: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg")
     
     @State private var commands: [String] = ["", "", ""]
+    @State private var number = 0
+    
+    @State private var colors: Set<Color> = [.black]
+    
+    private var color: LinearGradient {
+        LinearGradient(colors: Array(colors), startPoint: .bottom, endPoint: .top)
+    }
     
     var body: some View {
         VStack {
-            ForEach(0..<commands.count, id: \.self) { index in
-                TextField("\(index)", text: $commands[index])
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.horizontal)
-            }
+            Text("Hello")
+                .font(.title3)
+            Text("Hello")
+                .font(.headline)
+            Text("Hello")
+                .font(.body)
+            ProgressView()
+                .tint(.red)
         }
+//        VStack {
+//            Chart(datas, id: \.index) { data in
+//                LineMark(x: .value("Index", data.index), y: .value("Strength", data.value))
+//                    .foregroundStyle(color)
+//            }
+//            .frame(width: 300, height: 300)
+//            Button("Append") {
+//                let color: [Color] = [.black, .blue, .white, .red, .yellow, .orange]
+//                colors.insert(color.randomElement()!)
+//            }
+//        }
+//        Text("Hello")
+//            .font(.title)
+//            .padding()
+//            .foregroundStyle(.black)
+//            .background {
+//                RoundedRectangle(cornerRadius: 12)
+//                    .foregroundStyle(.ultraThinMaterial)
+//            }
+//        VStack {
+//            Text("\(number)")
+//            Button("Start", action: {
+//                Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+//                    number += 1
+//                    if number == 4 {
+//                        timer.invalidate()
+//                    }
+//                }
+//                print("Hello")
+//            })
+//        }
 //        Text("Hello")
 //            .foregroundStyle(.white)
 //            .padding()

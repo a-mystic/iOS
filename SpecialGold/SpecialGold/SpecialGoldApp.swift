@@ -1,14 +1,14 @@
 //
-//  makeColorApp.swift
-//  makeColor
+//  SpecialGoldApp.swift
+//  SpecialGold
 //
-//  Created by a mystic on 2023/09/19.
+//  Created by a mystic on 1/2/24.
 //
 
 import SwiftUI
 
 @main
-struct makeColorApp: App {
+struct SpecialGoldApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
