@@ -9,14 +9,14 @@ import SwiftUI
 import SwiftData
 import Charts
 
-@Model
-class data {
-    var content: Data
-    
-    init(content: Data) {
-        self.content = content
-    }
-}
+//@Model
+//class data {
+//    var content: Data
+//    
+//    init(content: Data) {
+//        self.content = content
+//    }
+//}
 
 struct ChartData {
     var index: Int
@@ -48,17 +48,56 @@ struct ContentView: View {
         LinearGradient(colors: Array(colors), startPoint: .bottom, endPoint: .top)
     }
     
+    @State private var offset: CGFloat = 0
+    @State private var showTransition = false
+    @State private var text = ""
+    
     var body: some View {
-        VStack {
-            Text("Hello")
-                .font(.title3)
-            Text("Hello")
-                .font(.headline)
-            Text("Hello")
-                .font(.body)
-            ProgressView()
-                .tint(.red)
+        TextField(text: $text, axis: .vertical) {
+            Text("Enter")
+                .foregroundStyle(.white)
         }
+        .padding()
+//        ZStack {
+//            if showTransition {
+//                Circle()
+//                    .transition(.move(edge: .bottom))
+//                    .padding()
+//            }
+//            Color.clear
+//                .onAppear(perform: {
+//                    withAnimation(.easeInOut(duration: 2)) {
+//                        showTransition = true
+//                    }
+//                })
+//        }
+//        VStack {
+//            Button("hel") {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                    withAnimation {
+//                        showTransition = true
+//                    }
+//                }
+//            }
+//            .onAppear(perform: {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                    withAnimation {
+//                        showTransition = true
+//                    }
+//                }
+//            })
+//            if showTransition {
+//                RoundedRectangle(cornerRadius: 12)
+//                    .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .identity))
+//            }
+//        }
+//        .onAppear {
+//            for i in 0..<300 {
+//                withAnimation(.linear.delay(0.01 * Double(i))) {
+//                    offset += 1
+//                }
+//            }
+//        }
 //        VStack {
 //            Chart(datas, id: \.index) { data in
 //                LineMark(x: .value("Index", data.index), y: .value("Strength", data.value))
@@ -202,6 +241,7 @@ class dummyController: UIViewController, UINavigationControllerDelegate {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 

@@ -154,7 +154,42 @@ import NaturalLanguage
 //print(UInt64.max)
 
 
-var a = [1, 2, 3, 4]
+//var a = Array(1...138)
+//let k = Double(a.count) * 0.05
+//
+//a = Array(a.dropFirst(Int(k)))
+//a = Array(a.dropLast(Int(k)))
+//
+//print(Int(k))
+//print(a)
 
-a += [5,6]
-print(a)
+//let feedbacks = [1, 2, 3]
+//var s = ""
+//
+//private func evaluate() {
+//    let count = feedbacks.count
+//    switch count {
+//    case 1, 2:
+//       print("😀 Very Good")
+//    case 3...4:
+//        print("🙂 Good")
+//    default:
+//        print("😢 Not Good")
+//    }
+//}
+//
+//evaluate()
+//if s.isEmpty {
+//    print("em")
+//}
+
+let ratio = 0.21
+let key = "angray"
+
+if key == "smile" && ratio > 0.2 {
+    print("smile")
+} else if key != "smile" && ratio > 0.15 {
+    print("Hello")
+}
+
+print(true || false)
