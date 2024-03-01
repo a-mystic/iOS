@@ -38,14 +38,14 @@ struct ContentView: View {
             }
             .gesture(
                 DragGesture()
-                    .onChanged({ value in
+                    .onChanged { value in
                         dragOffset = value.translation
-                    })
-                    .onEnded({ _ in
+                    }
+                    .onEnded { _ in
                         withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
                             dragOffset = .zero
                         }
-                    })
+                    }
             )
         }
     }
