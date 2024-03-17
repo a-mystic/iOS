@@ -197,13 +197,33 @@ import NaturalLanguage
 //var number: Double = -1
 //print(Int(number.rounded()))
 
-private let contentCategory: [String:[String]] = [
-    "장소" : ["영화, 산책, 쇼핑"],
-    "웹사이트" : ["유튜브", "책", "음악"]
-]
+//private let contentCategory: [String:[String]] = [
+//    "장소" : ["영화, 산책, 쇼핑"],
+//    "웹사이트" : ["유튜브", "책", "음악"]
+//]
+//
+//for category in contentCategory.keys {
+//    if let values = contentCategory[category], values.contains("음악") {
+//        print(category)
+//    }
+//}
 
-for category in contentCategory.keys {
-    if let values = contentCategory[category], values.contains("음악") {
-        print(category)
+//let a = "hel123o"
+//for char in a {
+//    if char.isLetter {
+//        print(char)
+//    }
+//}
+
+class Solution {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        for i in 0..<nums.count {
+            for j in i + 1..<nums.count {
+                if (nums[i] + nums[j]) == target {
+                    return [i, j]
+                }
+            }
+        }
+        return []
     }
 }
