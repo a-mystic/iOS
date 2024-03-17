@@ -53,11 +53,19 @@ struct ContentView: View {
     @State private var text = ""
     
     var body: some View {
-        TextField(text: $text, axis: .vertical) {
-            Text("Enter")
-                .foregroundStyle(.white)
+        NavigationStack {
+            Text("FamilyActivityPicker")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        closeButton
+                    }
+                }
         }
-        .padding()
+//        TextField(text: $text, axis: .vertical) {
+//            Text("Enter")
+//                .foregroundStyle(.white)
+//        }
+//        .padding()
 //        ZStack {
 //            if showTransition {
 //                Circle()
@@ -198,6 +206,17 @@ struct ContentView: View {
 //        .overlay {
 //            cont
 //        }
+    
+    @Environment(\.dismiss) var dismiss
+    
+    private var closeButton: some View {
+        Button {
+            dismiss()
+        } label: {
+            Image(systemName: "xmark")
+                .foregroundStyle(.white)
+        }
+    }
     
     private func getDataFromImage() -> Data? {
         return UIImage(named: "binary")?.pngData()

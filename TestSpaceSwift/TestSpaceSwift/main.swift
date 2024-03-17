@@ -183,13 +183,27 @@ import NaturalLanguage
 //    print("em")
 //}
 
-let ratio = 0.21
-let key = "angray"
+//let ratio = 0.21
+//let key = "angray"
+//
+//if key == "smile" && ratio > 0.2 {
+//    print("smile")
+//} else if key != "smile" && ratio > 0.15 {
+//    print("Hello")
+//}
+//
+//print(true || false)
 
-if key == "smile" && ratio > 0.2 {
-    print("smile")
-} else if key != "smile" && ratio > 0.15 {
-    print("Hello")
+//var number: Double = -1
+//print(Int(number.rounded()))
+
+private let contentCategory: [String:[String]] = [
+    "장소" : ["영화, 산책, 쇼핑"],
+    "웹사이트" : ["유튜브", "책", "음악"]
+]
+
+for category in contentCategory.keys {
+    if let values = contentCategory[category], values.contains("음악") {
+        print(category)
+    }
 }
-
-print(true || false)
